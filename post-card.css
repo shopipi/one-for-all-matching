@@ -1,0 +1,295 @@
+:root
+{
+  --card-height: 200px;
+}
+
+/**
+* 投稿カード
+*/
+div.post-card-wrapper
+{
+  width: 100%;
+  height: var(--card-height);
+
+  display: flex;
+  flex-direction: row;
+
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+}
+div.post-card-wrapper:not(:first-child)
+{
+  margin-top: 32px;
+}
+
+/**
+* プロフィールやボタン、本文が格納される
+*/
+div.post-card-wrapper > div.main-body
+{
+  width: calc(100% - var(--card-height));
+  
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+/* 登校時間 & 残り時間 */
+div.post-card-wrapper > div.main-body > div.time
+{
+  text-align: right;
+  padding: 7px 14px 0 0;
+  font-size: 14px;
+  color: darkgray;
+
+  user-select: none;
+}
+
+/* プロフィールと本文 */
+div.post-card-wrapper > div.main-body > div.overview
+{
+  height: max-content;
+  display: flex;
+  flex-direction: row;
+}
+
+/* プロフィール */
+div.post-card-wrapper > div.main-body > div.overview > div.profile
+{
+  margin-left: 28px;
+  width: 72px;
+  height: inherit;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* プロフィール画像 */
+div.post-card-wrapper > div.main-body > div.overview > div.profile > div.avatar
+{
+  width: 72px;
+  height: 72px;
+
+  border-radius: 50%;
+  
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background: url(https://www.sketchappsources.com/resources/source-image/profile-illustration-gunaldi-yunus.png);
+}
+/* プロフィール名前 */
+div.post-card-wrapper > div.main-body > div.overview > div.profile > div.name
+{
+  margin: 6px auto 0;
+  padding: 0;
+  text-align: center;
+
+  font-size: 12px;
+  color: darkgray;
+}
+
+/* 文章 */
+div.post-card-wrapper > div.main-body > div.overview > div.summary
+{
+  margin: 0 14px;
+  padding: 6px 0;
+
+  width: calc(100% - var(--card-height));
+  height: calc(var(--card-height) - 64px - 14px * 2);
+
+  display: flex;
+  flex-direction: column;
+}
+/* プロジェクト名 */
+div.post-card-wrapper > div.main-body > div.overview > div.summary > a.project-name
+{
+  width: fit-content;
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a3352;
+}
+div.post-card-wrapper > div.main-body > div.overview > div.summary > a.project-name:hover
+{
+  color: #496485;
+}
+/* プロジェクト詳細説明 */
+div.post-card-wrapper > div.main-body > div.overview > div.summary > div.desc
+{
+  overflow: hidden;
+  display: -webkit-box;
+
+  box-orient: vertical;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  line-clamp: 3;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+  overflow-wrap: break-word;
+  
+  font-size: 16px;
+  color: gray;
+}
+
+/* ボタン & タグ */
+div.post-card-wrapper > div.main-body > div.bottom
+{
+  width: calc(100% + var(--card-height));
+  height: 48px;
+  background: #f1f3f8;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* コンタクトボタンと保存ボタン */
+div.post-card-wrapper > div.main-body > div.bottom > div.action-1
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-left: 28px;
+
+  width: 72px;
+}
+div.post-card-wrapper > div.main-body > div.bottom > div.action-1 > button
+{
+  position: relative;
+  display: flex;
+  
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none !important;
+  outline: none !important;
+
+  background: transparent !important;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  user-select: none;
+}
+div.post-card-wrapper > div.main-body > div.bottom > div.action-1 > button:hover
+{
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
+div.post-card-wrapper > div.main-body > div.bottom > div.action-1 > button.message
+{
+  color: white;
+  color: #455b74;
+}
+div.post-card-wrapper > div.main-body > div.bottom > div.action-1 > button.bookmark
+{
+  color: white;
+  color: #f9054a;
+}
+div.post-card-wrapper > div.main-body > div.bottom > div.action-1 > button div.tooltip
+{
+  position: absolute;
+  top: -32px;
+
+  display: none;
+  
+  padding: 5px 10px;
+
+  font-size: 12px;
+  color: white;
+  
+  border-radius: 5px;
+
+  background: black;
+
+  width: max-content;
+  height: 18px;
+}
+div.post-card-wrapper > div.main-body > div.bottom > div.action-1 > button div.tooltip::before
+{
+  content: '';
+  
+  position: absolute;
+  top: 100%;
+  left: 50%;
+
+  margin-left: -5px;
+  
+  border: solid 5px transparent;
+  border-top: 5px solid black;
+}
+div.post-card-wrapper > div.main-body > div.bottom > div.action-1 > button:hover > div.tooltip
+{
+  display: flex;
+  align-items: center;
+}
+div.post-card-wrapper > div.main-body > div.bottom > div.tags
+{
+  display: flex;
+  flex-direction: row;
+}
+div.post-card-wrapper > div.main-body > div.bottom > div.tags > a
+{
+  font-size: 14px;
+  font-weight: bold;
+  color: #3d86f4;
+  
+  text-decoration: none;
+  margin-left: 14px;
+}
+div.post-card-wrapper > div.main-body > div.bottom > div.tags > a:hover
+{
+  text-decoration: underline;
+}
+
+div.post-card-wrapper > div.images
+{
+  width: var(--card-height);
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+  border-collapse: collapse;
+  
+  background: white;
+}
+div.post-card-wrapper > div.images > div.img
+{
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box !important;
+
+  background-size: cover !important;
+  background-position: center top !important;
+
+  border: solid 0px #eceef6;
+
+  z-index: 0;
+}
+div.post-card-wrapper > div.images > div.img:hover
+{
+  cursor: zoom-in;
+}
+div.post-card-wrapper > div.images > div.img:nth-child(2)
+{
+  border-left-width: 1px;
+}
+div.post-card-wrapper > div.images > div.img:nth-child(3)
+{
+  border-top-width: 1px;
+}
+div.post-card-wrapper > div.images > div.img:nth-child(4)
+{
+  border-top-width: 1px;
+  border-left-width: 1px;
+}

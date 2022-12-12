@@ -1,0 +1,51 @@
+@media (max-width: 480px)
+{
+  div.post-card-wrapper
+  {
+    flex-direction: column;
+    height: max-content;
+  }
+  div.post-card-wrapper > div.main-body > div.overview
+  {
+    margin-bottom: 32px;
+  }
+  div.post-card-wrapper > div.images
+  {
+    width: 100%;
+    height: 128px;
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 32px;
+  }
+}
+
+@media (max-width: 1330px)
+{
+  a.mobile-card-a
+  {
+    position: relative;
+  }
+  
+  div.post-card-wrapper
+  {
+    margin: 0 !important;
+    box-shadow: none;
+    border-bottom: solid 1px #f1f3f8;
+  }
+
+  div.post-card-wrapper > div.main-body
+  {
+    width: 100%;
+  }
+
+  div.post-card-wrapper > div.main-body > div.bottom
+  {
+    width: 100%;
+    background: transparent;
+  }
+  
+  div.post-card-wrapper > div.main-body > div.overview > div.summary > a.project-name:hover
+  {
+    color: inherit;
+  }
+}
