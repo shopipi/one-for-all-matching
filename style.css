@@ -4,6 +4,8 @@
   --guide-size: 344px;
   --search-box-width: 246px;
   --search-box-height: 44px;
+
+  --iwasaki-color: #003458;
 }
 
 *
@@ -34,6 +36,7 @@ div.top-menu
   height: var(--menu-size);
 
   background: white;
+  background: var(--iwasaki-color);
   box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 
   display: flex;
@@ -72,10 +75,13 @@ div.top-menu > div.search-box > input#search-text
   background: none !important;
 
   transition-duration: 0.3s;
+
+  color: white;
 }
 div.top-menu > div.search-box > input#search-text::placeholder
 {
   user-select: none;
+  color: white;
 }
 div.top-menu > div.search-box > input#search-text:focus
 {
@@ -91,6 +97,7 @@ div.top-menu > div.search-box > i
   height: var(--search-box-height);
 
   color: #908994;
+  color: white;
   font-size: 16px;
 
   transform: scaleX(-1);
