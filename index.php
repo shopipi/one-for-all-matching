@@ -80,7 +80,10 @@ $page_name = $page_infos[''.$hrefs[0]];
 
   <!-- Guide Menu -->
   <?php
-  include_once 'include/guide-menu.php';
+  if ($hrefs[0] === 'posts')
+  {
+    include_once 'include/guide-menu.php';
+  }
   ?>
 </body>
 

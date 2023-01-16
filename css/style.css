@@ -189,7 +189,9 @@ div.top-menu div.sort-box > div.dropdown > ul
 }
 div.top-menu div.sort-box > div.dropdown.open > ul
 {
+  margin-top: 4px;
   visibility: visible !important;
+  border-radius: 4px;
 }
 div.top-menu div.sort-box > div.dropdown > ul > li
 {
@@ -200,6 +202,14 @@ div.top-menu div.sort-box > div.dropdown > ul > li
   height: var(--search-box-height);
 
   user-select: none;
+}
+div.top-menu div.sort-box > div.dropdown > ul > li:first-child
+{
+  border-radius: 4px 4px 0 0;
+}
+div.top-menu div.sort-box > div.dropdown > ul > li:last-child
+{
+  border-radius: 0 0 4px 4px;
 }
 div.top-menu div.sort-box > div.dropdown > ul > li:hover
 {
