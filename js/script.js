@@ -35,34 +35,6 @@ $(function()
     }
   });
 
-  /**
-   * TopMenu SortBox Dropdown Clicked Event
-   */
-  $('div.top-menu div.sort-box > div.dropdown > ul > li > a').on('click', function(e)
-  {
-    const href = $(this).attr('href');
-    const query_key   = href.split('=')[0];
-    const query_value = href.split('=')[1];
-
-    const url = new URL(document.location.href);
-    
-    if (query_value !== 'all' &&
-        query_value !== 'newest')
-    {
-      url.searchParams.set(query_key, query_value);
-    }
-    else
-    {
-      url.searchParams.delete(query_key);
-    }
-    
-    history.replaceState(null, null, url.toString());
-
-    $(this).parent().parent().parent().find('div.inner > p').html($(this).text());
-
-    e.preventDefault();
-  });
-
   $('div.post-card-wrapper > div.main-body > div.overview > div.summary > a.project-name').on('click', function(e)
   {
     alert('モーダルウィンドウで詳細を表示');
@@ -86,10 +58,3 @@ $(function()
     $('div.top-menu').toggleClass('open');
   });
 });
-
-/**
- * Apply Sorted Result to Document
- */
-function apply_sorted_result()
-{
-}

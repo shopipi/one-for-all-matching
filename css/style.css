@@ -268,8 +268,15 @@ div.tab-menu
 
   box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
 }
+div.tab-menu > a
+{
+  width: fit-content;
+  height: fit-content;
+
+  text-decoration: none !important;
+}
 /* メニューボタン */
-div.tab-menu > div.menu-btn
+div.tab-menu div.menu-btn
 {
   margin: 10px auto;
   
@@ -291,12 +298,12 @@ div.tab-menu > div.menu-btn:first-child
 {
   margin-bottom: var(--menu-size);
 }
-div.tab-menu > div.menu-btn:hover
+div.tab-menu div.menu-btn:hover
 {
   cursor: pointer;
   color: #455b74;
 }
-div.tab-menu > div.menu-btn.select
+div.tab-menu div.menu-btn.select
 {
   color: white;
   background: #3d86f4;
@@ -333,7 +340,7 @@ div.guide-menu > div.poster
   
   background-size: contain !important;
   background-repeat: no-repeat !important;
-  background: url(resources/宣伝ポスター.jpg);
+  background: url(../resources/宣伝ポスター.jpg);
 }
 div.guide-menu > div.filters
 {
@@ -388,9 +395,11 @@ div.guide-menu > div.filters > div.filter-group > div.filter > label:hover
 div.main-contents-wrapper
 {
   margin: var(--menu-size) 0 0 var(--menu-size);
-  padding: 64px;
+  margin: 0 0 0 var(--menu-size);
+  /* padding: 64px; */
 
   width: calc(100% - var(--menu-size) - var(--guide-size) - 64px * 2);
+  width: calc(100% - var(--menu-size));
 
   display: flex;
   flex-direction: column;
