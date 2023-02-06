@@ -125,7 +125,7 @@
   }
   div.main-contents-wrapper > div.under-top-menu
   {
-    margin-top: var(--menu-size);
+    margin: var(--menu-size) 0;
   }
 }
 @media (max-width: 480px)

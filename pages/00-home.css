@@ -4,8 +4,8 @@ header
   height: 550px;
 
   background-size: cover !important;
-  background-position: center center !important;
-  background: url(https://webdesign-trends.net/wp/wp-content/uploads/2021/08/dummy-images.jpg) no-repeat;
+  background-position: center -300px !important;
+  background: url(../img/宣伝ポスター.jpg) no-repeat;
 }
 div.terms
 {

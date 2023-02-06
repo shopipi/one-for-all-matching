@@ -1,0 +1,42 @@
+div.chat-window-wrapper
+{
+  background: white;
+}
+div.chat-window-wrapper > div.chat-window-container
+{
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+}
+div.chat-window-wrapper > div.chat-window-container > div.title
+{
+  width: calc(100% - 32px * 2);
+  height: 72px;
+  
+  padding: 0 32px;
+  
+  font-size: 18px;
+  font-weight: bold;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 1;
+
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.4);
+}
+div.chat-window-wrapper > div.chat-window-container > div.title:hover
+{
+  cursor: pointer;
+}
+div.chat-window-wrapper > div.chat-window-container.open > div.main-body
+{
+  width: 100%;
+  height: 512px;
+  background: white;
+}

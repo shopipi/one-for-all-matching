@@ -57,7 +57,7 @@ define('URL', '/OneForAll/マッチングシステム')
     </div>
   </a>
 
-  <?php if ($hrefs[0] !== 'my-page'): ?>
+  <!-- <?php if ($hrefs[0] !== 'my-page'): ?>
   <a href="<?php echo URL?>/my-page">
   <?php else: ?>
   <a>
@@ -68,7 +68,7 @@ define('URL', '/OneForAll/マッチングシステム')
         <?php echo $page_infos['my-page']; ?>
       </div>
     </div>
-  </a>
+  </a> -->
 
   <?php if ($hrefs[0] !== 'help'): ?>
   <a href="<?php echo URL?>/help">

@@ -73,13 +73,12 @@ $page_name = $page_infos[$hrefs[0]];
     {
       include_once 'pages/02-bookmark.php';
     }
-
     /**
-     * マイページ
+     * メッセージ
      */
-    if ($hrefs[0] === 'my-page')
+    if ($hrefs[0] === 'messages')
     {
-      include_once 'pages/04-my-page.php';
+      include_once 'pages/03-messages.php';
     }
     ?>
   </div>
