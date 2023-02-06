@@ -349,6 +349,8 @@ div.tab-menu div.menu-btn > div.menu-text
 
   width: 256px;
 
+  padding-left: 8px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -9,7 +9,7 @@ div.posts-wrapper
   flex-direction: column;
   justify-content: center;
 }
-@media (max-width: 480px)
+@media (max-width: 1330px)
 {
   div.posts-wrapper
   {
