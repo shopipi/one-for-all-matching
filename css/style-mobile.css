@@ -113,7 +113,8 @@
 
 @media (max-width: 1330px)
 {
-  div.main-contents-wrapper
+  div.main-contents-wrapper,
+  div.main-contents-wrapper > div.under-top-menu
   {
     margin: 0;
     padding: 0;
@@ -121,6 +122,10 @@
     width: 100%;
     
     transition-duration: 0.3s;
+  }
+  div.main-contents-wrapper > div.under-top-menu
+  {
+    margin-top: var(--menu-size);
   }
 }
 @media (max-width: 480px)
@@ -145,6 +150,14 @@
 {
   *.mobile-only
   {
+    width: inherit;
+    height: inherit;
     visibility: visible;
+  }
+  *.PC-only
+  {
+    width: 0;
+    height: 0;
+    visibility: collapse;
   }
 }

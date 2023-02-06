@@ -254,6 +254,11 @@ div.top-menu button.new-post
   color: white;
   font-size: 14px;
   font-weight: bold;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
   
   background: linear-gradient(135deg, #f9054a 0%,#f9054a 100%);
 
@@ -266,6 +271,13 @@ div.top-menu button.new-post:hover
   background: linear-gradient(135deg, #f9054a 0%,#f914c7 100%);
   cursor: pointer;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+}
+div.top-menu button.new-post > *.mobile-only
+{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 /**
@@ -456,15 +468,21 @@ div.main-contents-wrapper
   margin: 0 0 0 var(--menu-size);
   /* padding: 64px; */
 
-  width: calc(100% - var(--menu-size) - var(--guide-size) - 64px * 2);
   width: calc(100% - var(--menu-size));
 
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+div.main-contents-wrapper > div.under-top-menu
+{
+  margin-top: var(--menu-size);
+  padding: 64px;
+}
 
 *.mobile-only
 {
+  width: 0;
+  height: 0;
   visibility: collapse;
 }

@@ -1,8 +1,5 @@
 div.posts-wrapper
 {
-  margin: var(--menu-size) 0;
-  padding: 64px;
-
   width: calc(100% - var(--guide-size) - 64px * 2);
 
   display: flex;

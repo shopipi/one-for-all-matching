@@ -72,7 +72,12 @@ $caption = isset($caption) ? $caption : $page_name;
       </div>
     </div>
     <button class="new-post" onclick="">
-      <i class="fa-solid fa-pen"></i> 投稿する
+      <div class="PC-only">
+        <i class="fa-solid fa-pen"></i> 投稿する
+      </div>
+      <div class="mobile-only">
+        <i class="fa-solid fa-pen"></i>
+      </div>
     </button>
   </div>
   <?php else: ?>

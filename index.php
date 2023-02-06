@@ -73,6 +73,14 @@ $page_name = $page_infos[$hrefs[0]];
     {
       include_once 'pages/02-bookmark.php';
     }
+
+    /**
+     * マイページ
+     */
+    if ($hrefs[0] === 'my-page')
+    {
+      include_once 'pages/04-my-page.php';
+    }
     ?>
   </div>
 
