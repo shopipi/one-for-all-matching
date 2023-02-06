@@ -1,0 +1,18 @@
+header
+{
+  width: 100%;
+  height: 550px;
+
+  background-size: cover !important;
+  background-position: center center !important;
+  background: url(https://webdesign-trends.net/wp/wp-content/uploads/2021/08/dummy-images.jpg) no-repeat;
+}
+div.terms
+{
+  width: 100%;
+  aspect-ratio: 1 / 1.415;
+
+  background-size: cover !important;
+  background-position: center center;
+  background: url(../img/規約pdf.jpg) no-repeat;
+}

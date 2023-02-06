@@ -1,6 +1,7 @@
 @media (max-width: 1330px)
 {
-  div.top-menu
+  div.top-menu,
+  div.top-menu-caption-only
   {
     width: 100%;
 
@@ -45,7 +46,7 @@
   {
     position: fixed;
     right: 10px;
-    bottom: 10px;
+    bottom: calc(var(--menu-size) + 10px);
     box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
   }
 }
@@ -54,7 +55,28 @@
 {
   div.tab-menu
   {
-    visibility: collapse;
+    top: auto;
+    bottom: 0;
+    
+    width: 100%;
+    height: var(--menu-size);
+    
+    flex-direction: row;
+    justify-content: center;
+  }
+  div.tab-menu > div.menu-btn:first-child
+  {
+    display: none;
+  }
+  div.tab-menu div.menu-btn.select
+  {
+    background: transparent;
+    box-shadow: none;
+    color: #3d86f4;
+  }
+  div.tab-menu div.menu-btn > div.menu-text
+  {
+    display: none;
   }
 }
 

@@ -1,9 +1,9 @@
 <?php
 $category_map =
 [
-  'creative'    => '制作協力?',
-  'skill'       => '技術サポート?',
-  'event-staff' => 'イベントスタッフ?'
+  'creative'    => 'カテゴリ1',
+  'skill'       => 'カテゴリ2',
+  'event-staff' => 'カテゴリ3'
 ];
 $category_str = isset($_GET['c']) ? $category_map[$_GET['c']] : '全て';
 
@@ -13,8 +13,16 @@ $order_by_map =
   'oldest' => '古い順'
 ];
 $order_by_str = isset($_GET['o']) ? $order_by_map[$_GET['o']] : $order_by_map['newest'];
+
+$caption_only_mode = isset($caption_only_mode) ? $caption_only_mode : false;
+$caption = isset($caption) ? $caption : $page_name;
 ?>
+<?php if (!$caption_only_mode): ?>
 <div class="top-menu">
+<?php else: ?>
+<div class="top-menu-caption-only">
+<?php endif; ?>
+  <?php if (!$caption_only_mode): ?>
   <div class="search-box">
     <input type="search" id="search-text" placeholder="#もしくはキーワードで検索">
     <i class="fa-solid fa-magnifying-glass"></i>
@@ -36,13 +44,13 @@ $order_by_str = isset($_GET['o']) ? $order_by_map[$_GET['o']] : $order_by_map['n
             <a>全て</a>
           </li>
           <li>
-            <a>制作協力?</a>
+            <a>カテゴリ1</a>
           </li>
           <li>
-            <a>技術サポート?</a>
+            <a>カテゴリ2</a>
           </li>
           <li>
-            <a>イベントスタッフ?</a>
+            <a>カテゴリ3</a>
           </li>
         </ul>
       </div>
@@ -67,4 +75,9 @@ $order_by_str = isset($_GET['o']) ? $order_by_map[$_GET['o']] : $order_by_map['n
       <i class="fa-solid fa-pen"></i> 投稿する
     </button>
   </div>
+  <?php else: ?>
+    <span>
+      <?php echo $caption; ?>
+    </span>
+  <?php endif; ?>
 </div>

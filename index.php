@@ -12,14 +12,18 @@ require 'functions.php';
 $page_infos =
 [
   ''      => '',
-  'posts' => '投稿一覧'
+  'posts' => '投稿一覧',
+  'bookmark' => 'ブックマーク',
+  'messages' => 'メッセージ',
+  'my-page' => 'マイページ',
+  'help' => 'ヘルプ'
 ];
 
 $href = urldecode($_SERVER['REQUEST_URI']);
 $href = explode('?', $href)[0];
 $hrefs = explode('/', $href);
 array_splice($hrefs, 0, 3);
-$page_name = $page_infos[''.$hrefs[0]];
+$page_name = $page_infos[$hrefs[0]];
 ?>
 
 <!DOCTYPE html>
@@ -53,7 +57,7 @@ $page_name = $page_infos[''.$hrefs[0]];
     <?php
     if ($hrefs[0] === '')
     {
-      echo '<h1 style="margin: 0; passing: 0">ここにペライチ？</h1>';
+      include_once 'pages/00-home.php';
     }
     /**
      * 投稿一覧
@@ -62,6 +66,13 @@ $page_name = $page_infos[''.$hrefs[0]];
     {
       include_once 'pages/01-posts.php';
     }
+    /**
+     * ブックマーク
+     */
+    if ($hrefs[0] === 'bookmark')
+    {
+      include_once 'pages/02-bookmark.php';
+    }
     ?>
   </div>
 
@@ -69,6 +80,14 @@ $page_name = $page_infos[''.$hrefs[0]];
   <?php
   if ($hrefs[0] === 'posts')
   {
+    include_once 'include/top-menu.php';
+  }
+  if ($hrefs[0] === 'bookmark' ||
+      $hrefs[0] === 'messages' ||
+      $hrefs[0] === 'my-page' ||
+      $hrefs[0] === 'help')
+  {
+    $caption_only_mode = true;
     include_once 'include/top-menu.php';
   }
   ?>
