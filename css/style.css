@@ -274,9 +274,16 @@ div.tab-menu
 
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 
   box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+
+  overflow-x: hidden;
+  transition-duration: 0.3s;
+}
+div.tab-menu.open
+{
+  width: 256px;
 }
 div.tab-menu > a
 {
@@ -284,10 +291,14 @@ div.tab-menu > a
   height: fit-content;
 
   text-decoration: none !important;
+
+  margin-left: calc(calc(var(--menu-size) - 60px) / 2);
 }
 /* メニューボタン */
 div.tab-menu div.menu-btn
 {
+  position: relative;
+  
   margin: 10px auto;
   
   width: 60px;
@@ -306,6 +317,7 @@ div.tab-menu div.menu-btn
 }
 div.tab-menu > div.menu-btn:first-child
 {
+  margin-left: calc(calc(var(--menu-size) - 60px) / 2);
   margin-bottom: var(--menu-size);
 }
 div.tab-menu div.menu-btn:hover
@@ -319,6 +331,31 @@ div.tab-menu div.menu-btn.select
   background: #3d86f4;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
   cursor: default;
+}
+div.tab-menu div.menu-btn > div.menu-text
+{
+  position: absolute;
+  left: var(--menu-size);
+
+  width: 256px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  color: #8f9cab;
+  font-size: 16px;
+  font-weight: bold;
+ 
+  transition-duration: 0.3s;
+}
+div.tab-menu div.menu-btn:hover > div.menu-text
+{
+  color: #455b74;
+}
+div.tab-menu div.menu-btn.select > div.menu-text
+{
+  color: #3d86f4;
 }
 
 /**
@@ -404,7 +441,6 @@ div.guide-menu > div.filters > div.filter-group > div.filter > label:hover
 
 div.main-contents-wrapper
 {
-  margin: var(--menu-size) 0 0 var(--menu-size);
   margin: 0 0 0 var(--menu-size);
   /* padding: 64px; */
 

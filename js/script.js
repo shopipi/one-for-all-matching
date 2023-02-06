@@ -1,5 +1,13 @@
 $(function()
 {
+  $('div.tab-menu > div.menu-btn:first-child').on('click', function()
+  {
+    $(this).parent().toggleClass('open');
+  });
+});
+
+$(function()
+{
   /**
    * Clicked Anywhere
    */
@@ -10,6 +18,11 @@ $(function()
       $('div.top-menu div.sort-box > div.dropdown.open').removeClass('open');
     }
 
+    if (!$(e.target).closest('div.tab-menu').length)
+    {
+      $('div.tab-menu').removeClass('open');
+    }
+    
     if (!$(e.target).closest('div.top-menu button.filter').length &&
         !$(e.target).closest('div.guide-menu.open').length)
     {
