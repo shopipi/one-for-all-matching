@@ -2,10 +2,10 @@
   <div class="main-body">
     <div class="time">投稿: 2022/11/30 11:21:47　残り30日</div>
     <div class="overview">
-      <div class="profile">
+      <a class="profile" href="https://example.com/profile/S2199219" target="_blank">
         <div class="avatar"></div>
         <div class="name">川崎 翔一</div>
-      </div>
+      </a>
       <div class="summary">
         <a href="./post/60852a7eac004f15a950224f30bdff6c" class="project-name">プロジェクト名</a>
         <div class="desc">

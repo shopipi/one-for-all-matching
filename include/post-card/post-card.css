@@ -56,7 +56,7 @@ div.post-card-wrapper > div.main-body > div.overview
 }
 
 /* プロフィール */
-div.post-card-wrapper > div.main-body > div.overview > div.profile
+div.post-card-wrapper > div.main-body > div.overview > a.profile
 {
   margin-left: 28px;
   width: 72px;
@@ -65,9 +65,11 @@ div.post-card-wrapper > div.main-body > div.overview > div.profile
   display: flex;
   flex-direction: column;
   align-items: center;
+  
+  text-decoration: none;
 }
 /* プロフィール画像 */
-div.post-card-wrapper > div.main-body > div.overview > div.profile > div.avatar
+div.post-card-wrapper > div.main-body > div.overview > a.profile > div.avatar
 {
   width: 72px;
   height: 72px;
@@ -80,7 +82,7 @@ div.post-card-wrapper > div.main-body > div.overview > div.profile > div.avatar
   background: url(https://www.sketchappsources.com/resources/source-image/profile-illustration-gunaldi-yunus.png);
 }
 /* プロフィール名前 */
-div.post-card-wrapper > div.main-body > div.overview > div.profile > div.name
+div.post-card-wrapper > div.main-body > div.overview > a.profile > div.name
 {
   margin: 6px auto 0;
   padding: 0;
