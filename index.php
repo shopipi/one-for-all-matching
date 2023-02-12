@@ -22,7 +22,7 @@ $page_infos =
 $href = urldecode($_SERVER['REQUEST_URI']);
 $href = explode('?', $href)[0];
 $hrefs = explode('/', $href);
-array_splice($hrefs, 0, 3);
+array_splice($hrefs, 0, count($hrefs) - 1);
 $page_name = $page_infos[$hrefs[0]];
 ?>
 

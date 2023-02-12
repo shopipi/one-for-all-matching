@@ -1,21 +1,15 @@
 RewriteEngine on
 
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.*)$ $1.html [L]
-
-RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME}\.php -f
 RewriteRule ^(.*)$ $1.php [L]
 
 <filesMatch "\.(html|php)$">
   Header set Pragma private
   Header set Cache-Control private
-  Header set Server apache
 </filesMatch>
 
 RewriteRule ^posts$    index.php [L,NC,QSA]
 RewriteRule ^bookmark$ index.php [L,NC,QSA]
 RewriteRule ^messages$ index.php [L,NC,QSA]
-RewriteRule ^my-page$  index.php [L,NC,QSA]
 RewriteRule ^help$     index.php [L,NC,QSA]
