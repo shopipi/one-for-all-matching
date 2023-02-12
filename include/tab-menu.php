@@ -1,6 +1,3 @@
-<?php
-define('URL', '/OneForAll/マッチングシステム')
-?>
 <div class="tab-menu">
 
   <div class="menu-btn">
@@ -8,7 +5,7 @@ define('URL', '/OneForAll/マッチングシステム')
   </div>
 
   <?php if ($hrefs[0] !== ''): ?>
-  <a href="<?php echo URL?>">
+  <a href="./">
   <?php else: ?>
   <a>
   <?php endif; ?>
@@ -19,7 +16,7 @@ define('URL', '/OneForAll/マッチングシステム')
   </a>
 
   <?php if ($hrefs[0] !== 'posts'): ?>
-  <a href="<?php echo URL?>/posts">
+  <a href="./posts">
   <?php else: ?>
   <a>
   <?php endif; ?>
@@ -32,7 +29,7 @@ define('URL', '/OneForAll/マッチングシステム')
   </a>
 
   <?php if ($hrefs[0] !== 'bookmark'): ?>
-  <a href="<?php echo URL?>/bookmark">
+  <a href="./bookmark">
   <?php else: ?>
   <a>
   <?php endif; ?>
@@ -45,7 +42,7 @@ define('URL', '/OneForAll/マッチングシステム')
   </a>
 
   <?php if ($hrefs[0] !== 'messages'): ?>
-  <a href="<?php echo URL?>/messages">
+  <a href="./messages">
   <?php else: ?>
   <a>
   <?php endif; ?>
@@ -58,7 +55,7 @@ define('URL', '/OneForAll/マッチングシステム')
   </a>
 
   <!-- <?php if ($hrefs[0] !== 'my-page'): ?>
-  <a href="<?php echo URL?>/my-page">
+  <a href="./my-page">
   <?php else: ?>
   <a>
   <?php endif; ?>
@@ -71,7 +68,7 @@ define('URL', '/OneForAll/マッチングシステム')
   </a> -->
 
   <?php if ($hrefs[0] !== 'help'): ?>
-  <a href="<?php echo URL?>/help">
+  <a href="./help">
   <?php else: ?>
   <a>
   <?php endif; ?>
