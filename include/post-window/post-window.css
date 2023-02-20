@@ -1,9 +1,9 @@
 * {
-    box-sizing: border-box;
-  }
-  body {
-    font-family:'Avenir','Helvetica, Neue','Helvetica','Arial';
-  }
+  box-sizing: border-box;
+}
+body {
+  font-family:'Avenir','Helvetica, Neue','Helvetica','Arial';
+}
   
   
   /* モーダルCSS */
@@ -31,7 +31,8 @@
     width: 70%;
     max-width: 500px;
     padding: 10px 30px;
-    background-color: #fff;
+    background-color: #f4ffff;
+    color: #003458;
   }
   
   .closeModal {
@@ -56,4 +57,9 @@
     top: 50%;
     left: 50%;
     transform:translate(-50%,-50%);
+  }
+  input[type="submit"]{
+    margin:0 auto;
+    width: 166px;
+    height: 38px;
   }
