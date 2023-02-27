@@ -55,14 +55,17 @@ $(function()
 
   $('div.post-card-wrapper > div.main-body > div.overview > div.summary > a.project-name').on('click', function(e)
   {
-    $('div.post-card-detail-wrapper').fadeIn(300);
+    $('div.post-card-detail-wrapper').fadeIn(150);
     $('div.post-card-detail-wrapper').css('display', 'flex');
-    e.preventDefault();
   });
 
-  $('div.post-card-detail-container > div.close').on('click', function()
+  $('div.post-card-detail-container button.close').on('click', function()
   {
-    $('div.post-card-detail-wrapper').fadeOut(300);
+    $('div.post-card-detail-wrapper').fadeOut(150);
+  });
+  $('div.post-card-detail-wrapper > div.bg').on('click', function()
+  {
+    $(this).parent().fadeOut(150);
   });
 });
 

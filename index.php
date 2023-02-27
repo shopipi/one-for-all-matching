@@ -47,7 +47,7 @@ $page_name = $page_infos[$hrefs[0]];
   LoadItemWithNoCache('include/post-card/post-card.js');
   ?>
   
-  <title><?php echo $page_name !== '' ? $page_name.' | ' : ''; ?>学生マッチング***</title>
+  <title><?php echo $page_name !== '' ? $page_name.' | ' : ''; ?>学生マッチングサイト</title>
 </head>
 
 <body>

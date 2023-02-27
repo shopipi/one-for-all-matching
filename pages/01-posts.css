@@ -1,20 +1,31 @@
 div.posts-wrapper
 {
   width: calc(100% - var(--guide-size) - 64px * 2);
-
+  
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 24px;
+}
+div.posts-wrapper.col
+{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
-  /* display: grid; */
-  /* grid-template-columns: repeat(2, 2fr); */
-  /* grid-gap: 12px; */
 }
 @media (max-width: 1330px)
 {
   div.posts-wrapper
   {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
     width: 100%;
     padding: 0;
+  }
+
+  div.post-card-wrapper:first-child
+  {
+    margin-top: 32px !important;
   }
 }

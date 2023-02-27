@@ -2,6 +2,7 @@ div.main-contents-wrapper > div.under-top-menu
 {
   display: flex;
   flex-direction: row;
+  margin: calc(var(--menu-size) * 0.5) 0 0;
 }
 
 span.title
@@ -31,11 +32,15 @@ div.post-card-wrapper:hover
 {
   cursor: pointer;
 }
+div.post-card-wrapper:not(:first-child)
+{
+  margin-top: 32px;
+}
 
 div.scroller
 {
   width: calc(100% - 10px * 2);
-  height: calc(85vh - 64px * 2);
+  height: calc(85vh - var(--menu-size) * 1.1);
 
   padding: 10px;
   
@@ -44,22 +49,109 @@ div.scroller
 
 div.chat-wrapper
 {
+  position: relative;
+  
   width: calc(512px - 10px * 2);
-  height: calc(85vh - 64px * 2);
+  height: calc(85vh - var(--menu-size) * 1.1);
   background: white;
   display: none;
 
   padding: 10px;
+
+  margin-left: 16px;
 }
 div.chat-wrapper.open
 {
   display: flex;
   flex-direction: column;
 }
+div.chat-wrapper > div.user-select-wrapper
+{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  padding: 10px;
+
+  background: white;
+
+  display: flex;
+  flex-direction: column;
+
+  display: none;
+}
+div.chat-wrapper > div.user-select-wrapper > div.from-user
+{
+  position: relative;
+  
+  margin: 4px 0;
+  padding: 6px 0 6px 12px;
+  
+  transition-duration: 0.1s;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+div.chat-wrapper > div.user-select-wrapper > div.from-user:hover
+{
+  background: #f1f3f8;
+  cursor: pointer;
+}
+div.chat-wrapper > div.user-select-wrapper > div.from-user > a
+{
+  height: 100%;
+  aspect-ratio: 1;
+}
+div.chat-wrapper > div.user-select-wrapper > div.from-user div.avatar
+{
+  height: 100%;
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+  
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background: url(../../img/user_icon_sample.png);
+}
+div.chat-wrapper > div.user-select-wrapper > div.from-user div.name
+{
+  font-weight: bold;
+  margin-left: 16px;
+}
+div.chat-wrapper > div.user-select-wrapper > div.from-user.new div.new
+{
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+  background: #f9054a;
+
+  position: absolute;
+  right: 6px;
+}
 div.chat-wrapper > div.chat-container
 {
   overflow: hidden;
   overflow-y: scroll;
+}
+div.chat-wrapper > div.chat-container > div.close
+{
+  width: 16px;
+  height: 16px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  color: darkgray;
+}
+div.chat-wrapper > div.chat-container > div.close:hover
+{
+  color: black;
+  cursor: pointer;
 }
 div.chat-wrapper > div.input-container > input[type="text"]
 {
@@ -91,28 +183,26 @@ div.chat-wrapper > div.input-container > button.send:hover
   cursor: pointer;
   box-shadow: 0px 0px 10px rgb(0,0,0,0.4);
 }
-
-/* div.chat-wrapper::-webkit-scrollbar,
-div.scroller::-webkit-scrollbar
-{
-  width: 6px;
-  height: 6px;
-}
-div.scroller::-webkit-scrollbar-track,
-div.chat-container::-webkit-scrollbar-track
-{
-  background: #DDD;
-}
-div.scroller::-webkit-scrollbar-thumb,
-div.chat-container::-webkit-scrollbar-thumb
-{
-  background: #373737;
-  border-radius: 3px;
-} */
 div.chat-wrapper > div.input-container
 {
   display: flex;
   flex-direction: row;
+}
+
+@media (max-width: 1330px)
+{
+  div.main-contents-wrapper > div.under-top-menu
+  {
+    margin: var(--menu-size) 0
+  }
+  div.post-card-wrapper:not(.open)
+  {
+    opacity: 1;
+  }
+  div.post-card-wrapper:not(:first-child)
+  {
+    margin-top: 32px !important;
+  }
 }
 
 /*

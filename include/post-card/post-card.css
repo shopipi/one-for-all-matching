@@ -1,6 +1,12 @@
 :root
 {
   --card-height: 200px;
+  
+  /* カラー：依頼 */
+  --color-irai: dodgerblue;
+
+  /* カラー：宣伝 */
+  --color-senden: orange;
 }
 
 /**
@@ -13,12 +19,18 @@ div.post-card-wrapper
 
   display: flex;
   flex-direction: row;
-
+  
   box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
+  
+  border-top: solid 4px transparent;
 }
-div.post-card-wrapper:not(:first-child)
+div.post-card-wrapper.irai
 {
-  margin-top: 32px;
+  border-top-color: var(--color-irai);
+}
+div.post-card-wrapper.senden
+{
+  border-top-color: var(--color-senden);
 }
 
 /**
@@ -109,13 +121,17 @@ div.post-card-wrapper > div.main-body > div.overview > div.summary > a.project-n
 {
   width: fit-content;
   margin: 0;
+
+  color: #1a3352;
   font-size: 18px;
   font-weight: bold;
-  color: #1a3352;
+
+  text-decoration: underline;
 }
 div.post-card-wrapper > div.main-body > div.overview > div.summary > a.project-name:hover
 {
   color: #496485;
+  cursor: pointer;
 }
 /* プロジェクト詳細説明 */
 div.post-card-wrapper > div.main-body > div.overview > div.summary > div.desc
@@ -172,20 +188,24 @@ div.post-card-wrapper > div.main-body > div.bottom > div.action-1 button
   
   width: 32px;
   height: 32px;
-
+  
   display: flex;
   align-items: center;
   justify-content: center;
-
+  
   border: none !important;
   outline: none !important;
-
+  
   background: transparent !important;
-
+  
   font-size: 18px;
   font-weight: bold;
 
   user-select: none;
+}
+div.post-card-wrapper.no-buttons > div.main-body > div.bottom > div.action-1 button
+{
+  display: none;
 }
 div.post-card-wrapper > div.main-body > div.bottom > div.action-1 button:hover
 {

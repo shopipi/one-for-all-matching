@@ -55,7 +55,7 @@ LoadItemWithNoCache('include/post-window/post-window.js');
           <label><input type="radio" name="radio" value="2">30日</label>
         </p>
 
-        <p><a href="./" target="_blank">マッチング規約</a>に同意する</p>
+        <p><a href="./#terms" target="_blank">マッチング規約</a>に同意する</p>
 
         <label><input type="checkbox" name="radio" value="1">はい</label>
 

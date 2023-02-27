@@ -1,37 +1,46 @@
 <?php
 LoadItemWithNoCache('include/post-card-detail/post-card-detail.css');
 LoadItemWithNoCache('include/post-card-detail/post-card-detail.js');
-
-LoadItemWithNoCache('include/post-card/post-card.js');
 ?>
 <div class="post-card-detail-wrapper">
+  <div class="bg"></div>
   <div class="post-card-detail-container">
 
-    <div class="close">
-      <i class="fa-solid fa-xmark"></i>
+    <div class="actions">
+
+      <div class="action-1">
+
+        <a href="./messages">
+          <button class="message">
+            <i class="fa-regular fa-envelope"></i>
+            <div class="tooltip">コンタクト</div>
+          </button>
+        </a>
+
+        <button class="bookmark">
+          <i class="fa-regular fa-bookmark"></i>
+          <div class="tooltip">保存</div>
+        </button>
+        
+        <button class="close">
+          <i class="fa-solid fa-xmark"></i>
+          <div class="tooltip">閉じる</div>
+        </button>
+
+      </div>
+
     </div>
 
     <div class="summary">
 
       <div class="title">
         <div class="avatar"></div>
-        <div class="project-name">ああああああああああああああああああああああああああああああ</div>
-        
+        <div class="project-name">プロジェクト名</div>
+
         <div class="bottom">
-          <div class="action-1">
-            <a href="./messages">
-              <button class="message">
-                <i class="fa-regular fa-envelope"></i>
-                <div class="tooltip">コンタクト</div>
-              </button>
-            </a>
-            <button class="bookmark">
-              <i class="fa-regular fa-bookmark"></i>
-              <div class="tooltip">保存</div>
-            </button>
-          </div>
+
         </div>
-        
+
       </div>
 
       <div class="desc">プロジェクトの説明です。
@@ -71,10 +80,3 @@ LoadItemWithNoCache('include/post-card/post-card.js');
 
   </div>
 </div>
-<style>
-  .post-card-detail-wrapper *
-  {
-    /* outline: dashed 1px black; */
-    /* outline-offset: -1px; */
-  }
-</style>

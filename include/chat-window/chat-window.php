@@ -1,11 +1,19 @@
 <?php
 LoadItemWithNoCache('pages/01-posts.css');
 ?>
-<div class="posts-wrapper">
+<div class="posts-wrapper col">
 
   <div class="scroller">
 
+    <?php
+    $no_buttons = true;
+    ?>
+  
     <span class="title">自分のプロジェクト</span>
+    <?php
+    $my_project = true;
+    ?>
+    
     <?php
     include 'include/post-card/post-card.php';
     ?>
@@ -14,19 +22,16 @@ LoadItemWithNoCache('pages/01-posts.css');
     
     <span class="title">コンタクト中</span>
     <?php
-    include 'include/post-card/post-card.php';
+    $my_project = false;
     ?>
-
-    <div class="dummy-space"></div>
-
-    <span class="title">進行中のプロジェクト</span>
+    
     <?php
     include 'include/post-card/post-card.php';
     ?>
 
     <div class="dummy-space"></div>
 
-    <span class="title">完了したプロジェクト</span>
+    <span class="title">コンタクト終了</span>
     <?php
     include 'include/post-card/post-card.php';
     include 'include/post-card/post-card.php';
@@ -36,7 +41,37 @@ LoadItemWithNoCache('pages/01-posts.css');
 </div>
 
 <div class="chat-wrapper">
+  <div class="user-select-wrapper">
+
+    <div class="from-user new">
+      <a href="https://example.com/profile/S2199219" target="_blank">
+        <div class="avatar"></div>
+      </a>
+      <div class="name">YDA 3年ゲーム科 川崎翔一</div>
+      <div class="new"></div>
+    </div>
+
+    <div class="from-user">
+      <a href="https://example.com/profile/S2199219" target="_blank">
+        <div class="avatar"></div>
+      </a>
+      <div class="name">ISC ****科 User1</div>
+    </div>
+    
+    <div class="from-user">
+      <a href="https://example.com/profile/S2199219" target="_blank">
+        <div class="avatar"></div>
+      </a>
+      <div class="name">fカレッジ ****科 User2</div>
+    </div>
+
+  </div>
   <div class="chat-container">
+
+    <div class="close">
+      <i class="fa-solid fa-chevron-left"></i>
+    </div>
+  
     <div class="container">
 
       <div class="imessage">

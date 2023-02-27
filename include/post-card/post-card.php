@@ -1,4 +1,33 @@
-<div class="post-card-wrapper">
+<?php
+/**
+ * コンタクトボタンとブックマークボタンを表示しないものを使用するかどうか
+ */
+$no_buttons = isset($no_buttons) ? $no_buttons : false;
+
+/**
+ * モード
+ * 0か1
+ * 0: 依頼
+ * 1: 宣伝
+ */
+$mode = isset($mode) ? $mode : 0;
+$modes =
+[
+  'irai',
+  'senden'
+];
+
+/**
+ * 自分のプロジェクトかどうか
+ */
+$my_project = isset($my_project) ? $my_project : false;
+?>
+
+<div class="post-card-wrapper
+  <?php if ($no_buttons) echo 'no-buttons' ?>
+  <?php echo $modes[$mode]; ?>
+  <?php if ($my_project) echo 'my-project'; ?>"
+  >
   <div class="main-body">
     <div class="time">投稿: 2022/11/30 11:21:47　残り30日</div>
     <div class="overview">
@@ -7,7 +36,7 @@
         <div class="name">川崎 翔一</div>
       </a>
       <div class="summary">
-        <a href="./post/60852a7eac004f15a950224f30bdff6c" class="project-name">ああああああああああああああああああああああああああああああ</a>
+        <a class="project-name">プロジェクト名</a>
         <div class="desc">
           プロジェクトの説明です。
           プロジェクトの説明です。
