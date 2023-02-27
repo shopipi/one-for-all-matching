@@ -1,7 +1,7 @@
 <div class="guide-menu">
   <div class="poster"></div>
 
-  <div class="filters">
+  <!-- <div class="filters">
 
     <p class="filter-caption">
       <i class="fa-solid fa-filter"></i> 絞り込み検索
@@ -15,5 +15,5 @@
       <div class="filter"><input type="checkbox" id="cb9"><label for="cb9">チェック3</label></div>
     </div>
 
-  </div>
+  </div> -->
 </div>

@@ -48,6 +48,11 @@ $(function()
     }
   });
 
+  $('div.top-menu button.new-post').on('click', function()
+  {
+    $('.modalArea').fadeIn(300);
+  });
+
   $('div.post-card-wrapper > div.main-body > div.overview > div.summary > a.project-name').on('click', function(e)
   {
     alert('モーダルウィンドウで詳細を表示');

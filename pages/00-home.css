@@ -1,11 +1,12 @@
 header
 {
-  width: 100%;
-  height: 550px;
+  /* width: 100%; */
+  height: 90vh;
+  aspect-ratio: 2734 / 1536;
 
-  background-size: cover !important;
-  background-position: center -300px !important;
-  background: url(../img/宣伝ポスター.jpg) no-repeat;
+  background: url(../img/header.png) no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 div.terms
 {
@@ -14,5 +15,15 @@ div.terms
 
   background-size: cover !important;
   background-position: center center;
-  background: url(../img/規約pdf.jpg) no-repeat;
+  background: url(../img/規約03.jpg) no-repeat;
+}
+@media (max-width: 480px)
+{
+  header
+  {
+    width: 100%;
+    background-size: 800px;
+    background-position: center center;
+    margin: 0 auto;
+  }
 }

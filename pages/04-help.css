@@ -1,0 +1,8 @@
+div.help
+{
+  width: 100%;
+  aspect-ratio: 1414 / 2000;
+  
+  background: url(../img/ヘルプポスター.jpg) no-repeat;
+  background-size: contain;
+}

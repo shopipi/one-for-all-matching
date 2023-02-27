@@ -223,7 +223,7 @@ div.top-menu div.sort-box > div.dropdown > ul > li:last-child
 }
 div.top-menu div.sort-box > div.dropdown > ul > li:hover
 {
-  background: #3d86f4;
+  background: #00a99d;
 }
 div.top-menu div.sort-box > div.dropdown > ul > li > a
 {
@@ -350,7 +350,7 @@ div.tab-menu div.menu-btn:hover
 div.tab-menu div.menu-btn.select
 {
   color: white;
-  background: #3d86f4;
+  background: #00a99d;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.4);
   cursor: default;
 }
@@ -379,7 +379,7 @@ div.tab-menu div.menu-btn:hover > div.menu-text
 }
 div.tab-menu div.menu-btn.select > div.menu-text
 {
-  color: #3d86f4;
+  color: #00a99d;
 }
 
 /**

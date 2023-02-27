@@ -1,9 +1,4 @@
 <?php
-// define('PASSWORD', 'private');
-// include 'certification.php';
-?>
-
-<?php
 date_default_timezone_set('Asia/Tokyo');
 require 'functions.php';
 ?>
@@ -33,6 +28,9 @@ $page_name = $page_infos[$hrefs[0]];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- Icon -->
+  <link rel="shortcut icon" href="https://yt3.ggpht.com/ytc/AMLnZu9uxqOEFZxOgo2-8sMlgAYXdJ_uYhbzNWxaz2iT=s900-c-k-c0x00ffffff-no-rj">
+
   <!-- CSS -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
   <?php
@@ -49,10 +47,13 @@ $page_name = $page_infos[$hrefs[0]];
   LoadItemWithNoCache('include/post-card/post-card.js');
   ?>
   
-  <title><?php echo $page_name !== '' ? $page_name.' | ' : ''; ?>7校合同マッチングシステム</title>
+  <title><?php echo $page_name !== '' ? $page_name.' | ' : ''; ?>学生マッチング***</title>
 </head>
 
 <body>
+  <?php
+  // include_once 'include/post-window/post-window.php';
+  ?>
   <div class="main-contents-wrapper">
     <?php
     if ($hrefs[0] === '')
@@ -65,6 +66,7 @@ $page_name = $page_infos[$hrefs[0]];
     if ($hrefs[0] === 'posts')
     {
       include_once 'pages/01-posts.php';
+      include_once 'include/post-window/post-window.php';
     }
     /**
      * ブックマーク
@@ -79,6 +81,10 @@ $page_name = $page_infos[$hrefs[0]];
     if ($hrefs[0] === 'messages')
     {
       include_once 'pages/03-messages.php';
+    }
+    if ($hrefs[0] === 'help')
+    {
+      include_once 'pages/04-help.php';
     }
     ?>
   </div>
