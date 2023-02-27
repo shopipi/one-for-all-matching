@@ -1,7 +1,8 @@
 :root
 {
   --menu-size: 80px;
-  --guide-size: 344px;
+  /* --guide-size: 344px; */
+  --guide-size: 0px;
   --search-box-width: 246px;
   --search-box-height: 44px;
 

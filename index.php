@@ -52,7 +52,7 @@ $page_name = $page_infos[$hrefs[0]];
 
 <body>
   <?php
-  // include_once 'include/post-window/post-window.php';
+  include_once 'include/post-card-detail/post-card-detail.php';
   ?>
   <div class="main-contents-wrapper">
     <?php
@@ -108,14 +108,6 @@ $page_name = $page_infos[$hrefs[0]];
   <!-- Tab Menu -->
   <?php
   include_once 'include/tab-menu.php';
-  ?>
-
-  <!-- Guide Menu -->
-  <?php
-  if ($hrefs[0] === 'posts')
-  {
-    include_once 'include/guide-menu.php';
-  }
   ?>
 </body>
 

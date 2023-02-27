@@ -1,0 +1,277 @@
+div.post-card-detail-wrapper
+{
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+  display: none;
+}
+div.post-card-detail-container
+{
+  position: relative;
+  
+  width: 80%;
+  height: 90%;
+  background: white;
+
+  border-radius: 20px;
+}
+div.post-card-detail-container > div.close
+{
+  width: 16px;
+  height: 16px;
+  
+  font-size: 18px;
+  
+  position: absolute;
+  top: 16px;
+  right: 16px;
+
+  padding: 16px;
+
+  border-radius: 50%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+  color: gray;
+  transition-duration: 0.3s;
+}
+div.post-card-detail-container > div.close:hover
+{
+  cursor: pointer;
+  color: black;
+}
+div.post-card-detail-container > div.summary
+{
+  width: calc(100% - 16px * 2);
+  height: calc(100% - 16px * 2);
+
+  padding: 16px;
+}
+div.post-card-detail-container > div.summary > div.title
+{
+  width: 100%;
+  height: fit-content;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+div.post-card-detail-container > div.summary > div.title > div.avatar
+{
+  width: 48px;
+  height: 48px;
+  
+  border-radius: 50%;
+  
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
+  background-position: center center !important;
+  background: url(../../img/user_icon_sample.png);
+}
+div.post-card-detail-container > div.summary > div.title > div.project-name
+{
+  width: 50%;
+  margin: 0;
+  margin-left: 16px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a3352;
+}
+div.post-card-detail-container > div.summary > div.desc
+{
+  margin-left: calc(48px + 16px);
+  white-space: pre;
+  
+  font-size: 16px;
+  color: gray;
+  
+  height: 60%;
+  
+  overflow-y: scroll;
+}
+div.post-card-detail-container > div.summary > div.images
+{
+  margin-top: 4px;
+  
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 25%);
+  border-collapse: collapse;
+  
+  background: white;
+
+  height: 25%;
+
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+div.post-card-detail-container > div.summary > div.images > div.img
+{
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box !important;
+
+  background-size: cover !important;
+  background-position: center top !important;
+
+  border-right: solid 1px #eceef6;
+  border-left: solid 1px #eceef6;
+
+  z-index: 0;
+}
+div.action-1
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  margin-left: 28px;
+
+  width: 72px;
+}
+div.action-1 a
+{
+  text-decoration: none;
+}
+div.action-1 button
+{
+  position: relative;
+  display: flex;
+  
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none !important;
+  outline: none !important;
+
+  background: transparent !important;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  user-select: none;
+}
+div.action-1 button:hover
+{
+  cursor: pointer;
+  transition-duration: 0.1s;
+}
+div.action-1 button.message
+{
+  color: white;
+  color: #455b74;
+}
+div.action-1 button.bookmark
+{
+  color: white;
+  color: #f9054a;
+}
+div.action-1 button div.tooltip
+{
+  position: absolute;
+  top: -32px;
+
+  display: none;
+  
+  padding: 5px 10px;
+
+  font-size: 12px;
+  color: white;
+  
+  border-radius: 5px;
+
+  background: black;
+
+  width: max-content;
+  height: 18px;
+}
+div.action-1 button div.tooltip::before
+{
+  content: '';
+  
+  position: absolute;
+  top: 100%;
+  left: 50%;
+
+  margin-left: -5px;
+  
+  border: solid 5px transparent;
+  border-top: 5px solid black;
+}
+div.action-1 button:hover > div.tooltip
+{
+  display: flex;
+  align-items: center;
+}
+
+div.tags
+{
+  display: flex;
+  flex-direction: row;
+}
+div.tags.post-card-detail
+{
+  padding-top: 14px;
+}
+div.tags > a
+{
+  font-size: 14px;
+  font-weight: bold;
+  color: #00a99d;
+  
+  text-decoration: none;
+  margin-left: 14px;
+}
+div.tags > a:hover
+{
+  text-decoration: underline;
+}
+
+@media (max-width: 480px)
+{
+  div.post-card-detail-container > div.summary > div.title > div.avatar
+  {
+    width: 12vw;
+    height: 12vw;
+  }
+  div.post-card-detail-container > div.summary > div.desc
+  {
+    margin-left: 0;
+  }
+  div.post-card-detail-container > div.close
+  {
+    width: 16px;
+    height: 16px;
+    
+    font-size: 18px;
+    
+    position: absolute;
+    top: 1vw;
+    right: 1vw;
+  }
+  div.post-card-detail-container
+  {
+    border-radius: 3vw;
+  }
+  div.post-card-detail-container > div.summary > div.images
+  {
+    height: 15%;
+    border-radius: 3vw;
+  }
+}

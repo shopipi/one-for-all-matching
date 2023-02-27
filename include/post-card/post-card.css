@@ -248,7 +248,7 @@ div.post-card-wrapper > div.main-body > div.bottom > div.tags > a
 {
   font-size: 14px;
   font-weight: bold;
-  color: #3d86f4;
+  color: #00a99d;
   
   text-decoration: none;
   margin-left: 14px;
@@ -281,10 +281,6 @@ div.post-card-wrapper > div.images > div.img
   border: solid 0px #eceef6;
 
   z-index: 0;
-}
-div.post-card-wrapper > div.images > div.img:hover
-{
-  cursor: zoom-in;
 }
 div.post-card-wrapper > div.images > div.img:nth-child(2)
 {

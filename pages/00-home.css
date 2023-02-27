@@ -15,14 +15,18 @@ div.terms
 
   background-size: cover !important;
   background-position: center center;
-  background: url(../img/規約03.jpg) no-repeat;
+  background: url(../img/terms.png) no-repeat;
+
+  margin-bottom: var(--menu-size);
 }
 @media (max-width: 480px)
 {
   header
   {
     width: 100%;
-    background-size: 800px;
+    height: 100vh;
+    background: url(../img/header_mobile.png);
+    background-size: cover;
     background-position: center center;
     margin: 0 auto;
   }

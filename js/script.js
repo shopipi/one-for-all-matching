@@ -55,12 +55,14 @@ $(function()
 
   $('div.post-card-wrapper > div.main-body > div.overview > div.summary > a.project-name').on('click', function(e)
   {
-    alert('モーダルウィンドウで詳細を表示');
+    $('div.post-card-detail-wrapper').fadeIn(300);
+    $('div.post-card-detail-wrapper').css('display', 'flex');
     e.preventDefault();
   });
-  $('div.post-card-wrapper > div.images > div.img').on('click', function()
+
+  $('div.post-card-detail-container > div.close').on('click', function()
   {
-    alert('モーダルウィンドウで拡大画像を表示？');
+    $('div.post-card-detail-wrapper').fadeOut(300);
   });
 });
 

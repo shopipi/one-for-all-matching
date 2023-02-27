@@ -1,9 +1,8 @@
 <?php
 $category_map =
 [
-  'creative'    => 'カテゴリ1',
-  'skill'       => 'カテゴリ2',
-  'event-staff' => 'カテゴリ3'
+  'irai'    => '依頼',
+  'senden'       => '宣伝'
 ];
 $category_str = isset($_GET['c']) ? $category_map[$_GET['c']] : '全て';
 
@@ -27,9 +26,6 @@ $caption = isset($caption) ? $caption : $page_name;
     <input type="search" id="search-text" placeholder="#もしくはキーワードで検索">
     <i class="fa-solid fa-magnifying-glass"></i>
   </div>
-  <button class="filter mobile-only">
-    <i class="fa-solid fa-sliders"></i>
-  </button>
   <div class="input-container">
     <div class="sort-box">
       <div class="dropdown">
@@ -44,13 +40,10 @@ $caption = isset($caption) ? $caption : $page_name;
             <a>全て</a>
           </li>
           <li>
-            <a>カテゴリ1</a>
+            <a>依頼</a>
           </li>
           <li>
-            <a>カテゴリ2</a>
-          </li>
-          <li>
-            <a>カテゴリ3</a>
+            <a>宣伝</a>
           </li>
         </ul>
       </div>

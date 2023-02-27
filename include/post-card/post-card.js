@@ -1,6 +1,6 @@
 $(function()
 {
-  $('div.post-card-wrapper > div.main-body > div.bottom > div.action-1 > button.bookmark').on('click', function()
+  $('button.bookmark').on('click', function()
   {
     $icon = $(this).find('i');
     $tooltip = $(this).find('div.tooltip');
