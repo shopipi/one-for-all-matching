@@ -1,8 +1,7 @@
-$(function () {
-    $('#openModal').click(function(){
-        $('#modalArea').fadeIn();
-    });
-    $('#closeModal , #modalBg').click(function(){
-      $('#modalArea').fadeOut();
-    });
+$(function ()
+{
+  $('#closeModal, #modalBg').click(function()
+  {
+    $('.modalArea').fadeOut(300);
   });
+});
